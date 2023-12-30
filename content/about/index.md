@@ -24,7 +24,6 @@ Schwalbengasse 18A
 
 {{% details title="More" closed="true" %}}
 
-Stefan Koell  
 **Registriert:** Landesgericht Wr. Neustadt  
 **Firmenbuch Nr:** FN 471719 f  
 **Kammerzugehörigkeit:** Niederösterreichische Wirtschaftskammer  
