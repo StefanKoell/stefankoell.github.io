@@ -43,22 +43,22 @@ params:
     list:
       displayTags: true
 
-  comments:
-    enable: false
-    type: giscus
+  # comments:
+  #   enable: false
+  #   type: giscus
 
-    # https://giscus.app/
-    giscus:
-      repo: StefanKoell/stefankoell.github.io
-      repoId: R_kgDOK-hilw
-      category: General
-      categoryId: DIC_kwDOK-hil84CcDek
-      mapping: pathname
-      strict: 0
-      reactionsEnabled: 1
-      emitMetadata: 0
-      inputPosition: top
-      lang: en
+  #   # https://giscus.app/
+  #   giscus:
+  #     repo: StefanKoell/stefankoell.github.io
+  #     repoId: R_kgDOK-hilw
+  #     category: General
+  #     categoryId: DIC_kwDOK-hil84CcDek
+  #     mapping: pathname
+  #     strict: 0
+  #     reactionsEnabled: 1
+  #     emitMetadata: 0
+  #     inputPosition: top
+  #     lang: en
       
   # Search
   # flexsearch is enabled by default
