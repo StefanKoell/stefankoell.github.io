@@ -74,3 +74,4 @@ Old content gone. A new blog, a fresh start.
 {{< /hextra/hero-badge >}}
 </div>
 
+<a rel="me" href="https://dotnet.social/@stefankoell">&nbsp;</a>
