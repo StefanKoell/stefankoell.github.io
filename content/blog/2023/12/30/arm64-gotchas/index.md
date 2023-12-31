@@ -54,4 +54,5 @@ I never really noticed that Chrome is not running as a native ARM64 binary. Web 
   When running Windows 11 on ARM64, make sure you are using Microsoft's Edge browser when testing an Avalonia app in the web browser!
 {{< /callout >}}
 
+### The Ugly
 Quite strange, to be honest. Both, Edge and Google Chrome are using the same Chromium engine under the hood. I don't really know why Google hasn't caught up yet. It's time for them to release an ARM64 version of Chrome.
