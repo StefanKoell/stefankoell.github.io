@@ -1,7 +1,7 @@
 ---
 title: Avalonia's Dispatcher
 comments: true
-date: 2024-02-29
+date: 2024-02-28
 tags: 
     - Avalonia
 ---
