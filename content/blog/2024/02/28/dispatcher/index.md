@@ -30,7 +30,7 @@ The `Dispatcher.UIThread` in [Avalonia](https://docs.avaloniaui.net/docs/guides/
 
 Starting a thread in the background and using the Dispatcher to get marshalled back to the UI thread can still cause UI thread congestions. This can happen if you have a tight loop where you call an expensive method on the UI thread. For example, imagine you need to create thousands of objects on the UI thread and the constructor is quite heavy and takes a realtively long time to finish:
 
-```csharp
+```csharp {linenos=table}
 private void CreateUIObjectsInBackground()
 {
   for (int i = 0; i++; i < 10_000)
@@ -44,7 +44,7 @@ In the above example, the method `CreateUIObjectsInBackground` runs on a seperat
 
 To resolve the issue, you can work around that by simply specifying a [`DispatcherPriority`](https://reference.avaloniaui.net/api/Avalonia.Threading/DispatcherPriority/), like this:
 
-```csharp
+```csharp {linenos=table}
 private void CreateUIObjectsInBackground()
 {
   for (int i = 0; i++; i < 10_000)

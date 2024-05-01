@@ -28,7 +28,7 @@ Here's an example for a markup extension I needed recently and thought it would 
 
 I came across the [FluentIcons](https://github.com/davidxuang/FluentIcons) project which allows you to use the vast library of fluent icons provided by [Microsoft](https://github.com/microsoft/fluentui-system-icons) using a simple XAML syntax. Once you added the nuget package, you can write XAML to draw one of the icons in your layout:
 
-```xml
+```xml {linenos=table}
 <Window xmlns:ic="using:FluentIcons.Avalonia">
     <ic:SymbolIcon Symbol="ArrowLeft" IsFilled="True" />
 </Window>
@@ -38,7 +38,7 @@ I came across the [FluentIcons](https://github.com/davidxuang/FluentIcons) proje
 
 I recently ported the [SettingsCard](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/windows/settingscontrols/settingscard) control from the WinUI controls to Avalonia and wanted to stay as close to the original API as possible. The SettingsCard has properties like Description, Header but also a property called `HeaderIcon` with the type `IconElement`. This means I can simply provide a `SymbolIcon` from FluentIcons to the `HeaderIcon` property, like this:
 
-```xml
+```xml {linenos=table}
 <settings:SettingsCard Header="Some header text">
   <settings:SettingsCard.HeaderIcon>
     <fluentIcons:SymbolIcon Symbol="Bug" />
@@ -53,7 +53,7 @@ Let's solve that using a custom markup extension.
 
 ### Writing a Markup Extension
 
-```csharp
+```csharp {linenos=table}
 using System.Diagnostics.CodeAnalysis;
 using FluentIcons.Avalonia;
 using FluentIcons.Common;
@@ -96,7 +96,7 @@ A couple of things to mention:
 
 To XAML is now a bit simpler with the markup extension:
 
-```xml
+```xml {linenos=table}
 <settings:SettingsCard 
   Header="Some header text" 
   HeaderIcon="{controlExtensions:SymbolIcon Symbol=Bug, IsFilled=False}">

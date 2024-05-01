@@ -14,7 +14,7 @@ First steps with Animations in Avalonia.
 
 I created a very simple example below. A standard Avalonia application with only a couple of elements in the `MainWindow.axaml` file. For simplicity, I don't have any view models, only a binding directly to the checkbox to control whether or not to show the **Footer** element.
 
-```xml
+```xml {linenos=table}
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"

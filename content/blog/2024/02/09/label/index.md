@@ -25,7 +25,7 @@ The Label control inherits from `ContentControl`, so the only property worth men
 What the docs do not mention is that the Content can (or should) be a `string` for the label text which can also contain an underscore `_` character in front of the character you want to mark as **accelerator** or **access** key. The character will be highlighted (underlined) when you press the `ALT` key on your keyboard.
 
 Here's a simple example:
-```xml
+```xml {linenos=table}
 <StackPanel Orientation="Vertical" VerticalAlignment="Center">
     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
         <Label Content="Click _Me:" Target="TextBox1" VerticalAlignment="Center" />
@@ -60,7 +60,7 @@ So far so good, right? Not quite. As it turns out the label control is somewhat 
 ### Failed attempts
 
 A quick search pointed me to [that post](https://github.com/AvaloniaUI/Avalonia/issues/5143) which suggested to just put a TextBlock control into the Label's content:
-```xml
+```xml {linenos=table}
 <Label Target="TextBox4">
     <TextBlock Text="Click _Me:" TextWrapping="Wrap" />
 </Label>
@@ -99,7 +99,7 @@ As you can see, the Label's ContentPresenter is putting the provided string (fro
 
 Turns out that applying a style to the AccessText control can alter the TextWrapping behavior:
 
-```xml
+```xml {linenos=table}
 <Label Content="Click _Me:" Target="TextBox1" VerticalAlignment="Center">
   <Label.Styles>
     <Style Selector="AccessText">
