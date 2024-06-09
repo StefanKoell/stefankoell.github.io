@@ -4,6 +4,8 @@ comments: true
 date: 2024-05-01
 tags: 
     - Avalonia
+    - Localization
+    - Binding
 ---
 
 Lifecycle and Weak References
@@ -12,7 +14,7 @@ Lifecycle and Weak References
 
 ## Introduction
 
-In March, I blogged about [markup extensions](blog/2024/03/10/markup-extensions/) to show how easy it is to make XAML authoring easier and more convenient. I created a couple of extensions and my last adventure turned out to be more challanging. I tried to create a markup extension to help with localization. In general, I wanted to have something like this in the XAML code:
+In March, I blogged about [markup extensions](/blog/2024/03/10/markup-extensions/) to show how easy it is to make XAML authoring easier and more convenient. I created a couple of extensions and my last adventure turned out to be more challanging. I tried to create a markup extension to help with localization. In general, I wanted to have something like this in the XAML code:
 
 ```xml
 <TextBlock Text="{ext:UIString Text=Some localizable string}" />

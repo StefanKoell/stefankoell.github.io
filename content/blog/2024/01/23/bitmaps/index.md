@@ -4,6 +4,8 @@ comments: true
 date: 2024-01-23
 tags: 
     - Avalonia
+    - Images
+    - Bitmaps
     - WinForms
 ---
 

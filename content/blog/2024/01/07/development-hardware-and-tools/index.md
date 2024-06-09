@@ -4,6 +4,8 @@ comments: true
 date: 2024-01-07
 tags: 
     - Avalonia
+    - General
+    - Hardware
 ---
 
 What am I using for development in terms of hardware and software (as of Jan, 2024).

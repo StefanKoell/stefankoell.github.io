@@ -4,6 +4,9 @@ comments: true
 date: 2024-02-09
 tags: 
     - Avalonia
+    - Label
+    - Accessibility
+    - Styles
 ---
 
 There's a Label control in Avalonia but it's weird.

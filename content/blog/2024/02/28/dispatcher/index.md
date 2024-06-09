@@ -4,6 +4,9 @@ comments: true
 date: 2024-02-28
 tags: 
     - Avalonia
+    - Dispatcher
+    - Threading
+    - Performance
 ---
 
 Lessons learned when using Avalonia's dispatcher and how to avoid choppy progress animations when scheduling jobs on the UI thread.

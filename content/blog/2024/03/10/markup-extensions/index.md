@@ -4,6 +4,7 @@ comments: true
 date: 2024-03-10
 tags: 
     - Avalonia
+    - XAML
 ---
 
 Give your XAML a massive boost with markup extension.
@@ -12,7 +13,7 @@ Give your XAML a massive boost with markup extension.
 
 ## What are Markup Extensions
 
-XAML Frameworks, including Avalonia, ship with a couple of [built-in markup extensions](https://docs.avaloniaui.net/docs/reference/mark-up-extensions). It's part of the tooling and provides a convenient way to refer to other objects and values in XAML. `{Binding}`, `{DynamicResource}` and `{StaticResource}` are probably the most commonly used markup extensions you use every day, without really knowing what's going on behind the scenes.
+XAML Frameworks, including Avalonia, ship with a couple of [built-in markup extensions](https://docs.avaloniaui.net/docs/concepts/markupextensions). It's part of the tooling and provides a convenient way to refer to other objects and values in XAML. `{Binding}`, `{DynamicResource}` and `{StaticResource}` are probably the most commonly used markup extensions you use every day, without really knowing what's going on behind the scenes.
 
 Best thing about markup extensions is, it can be extended and you can build your own. Second best thing is, it's quite easy.
 

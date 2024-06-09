@@ -4,6 +4,8 @@ comments: true
 date: 2024-04-06
 tags: 
     - Avalonia
+    - Styles
+    - Animations
 ---
 
 First steps with Animations in Avalonia.

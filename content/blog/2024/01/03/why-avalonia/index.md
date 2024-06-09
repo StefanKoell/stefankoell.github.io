@@ -4,6 +4,9 @@ comments: true
 date: 2024-01-03
 tags: 
     - Avalonia
+    - General
+    - Accessibility
+
 ---
 
 My personal view of things and why I think Avalonia is a great UI framework.

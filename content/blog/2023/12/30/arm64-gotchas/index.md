@@ -3,8 +3,12 @@ title: ARM64 Gotchas
 comments: true
 date: 2023-12-30
 tags: 
-    - General
     - Avalonia
+    - General
+    - Hardware
+    - ARM64
+    - Parallels
+    - Performance
 ---
 
 macOS on Apple Silicon runs great. It's fast, it's very reliable, it's quiet and it's beautiful. Windows 11 for ARM using Parallels on Apple Silicon also runs great, fast and reliable. There are still gotchas...

@@ -3,49 +3,49 @@ title: code4ward.net
 layout: hextra-home
 ---
 
-<div class="mt-6 mb-6">
+<div class="hx-mt-6 hx-mb-6">
 {{< hextra/hero-headline >}}
   blog.Reset(force: true);
 {{< /hextra/hero-headline >}}
 </div>
 
-<div class="mb-12">
+<div class="hx-mb-12">
 {{< hextra/hero-subtitle >}}
 Old content gone. A new blog, a fresh start.
 {{< /hextra/hero-subtitle >}}
 </div>
 
-<div class="mb-6">
+<div class="hx-mb-6">
 {{< hextra/hero-button text="Start reading" link="blog" >}}
 </div>
 
-<div class="mt-6"></div>
+<div class="hx-mt-6"></div>
 
 {{< hextra/feature-grid >}}
   {{< hextra/feature-card
     title="Royal TS/X & Royal Server"
     subtitle="Remote Management for IT Professionals"
-    class="aspect-auto md:aspect-[1.1/1] max-md:min-h-[340px]"
+    class="hx-aspect-auto md:hx-aspect-[1.1/1] max-md:hx-min-h-[340px]"
     image="images/royalts.png"
-    imageClass="w-[180%] sm:w-[110%] dark:opacity-80"
+    imageClass="hx-w-[180%] sm:hx-w-[110%] dark:hx-opacity-80"
     style="background: radial-gradient(ellipse at 50% 80%,rgba(142,53,74,0.15),hsla(0,0%,100%,0));"
     link="https://www.royalapps.com"
   >}}
   {{< hextra/feature-card
     title="My New Blog"
     subtitle="Mostly writing about C# and AvaloniaUI"
-    class="aspect-auto md:aspect-[1.1/1] max-lg:min-h-[340px]"
+    class="hx-aspect-auto md:hx-aspect-[1.1/1] max-lg:hx-min-h-[340px]"
     image="images/blog.webp"
-    imageClass="w-[180%] sm:w-[110%] dark:opacity-80"
+    imageClass="hx-w-[180%] sm:hx-w-[110%] dark:hx-opacity-80"
     style="background: radial-gradient(ellipse at 50% 80%,rgba(70,53,174,0.15),hsla(0,0%,100%,0));"
     link="blog"
   >}}
   {{< hextra/feature-card
     title="About code4ward GmbH"
     subtitle="IT Consulting and Development"
-    class="aspect-auto md:aspect-[1.1/1] max-md:min-h-[420px]"
+    class="hx-aspect-auto md:hx-aspect-[1.1/1] max-md:hx-min-h-[420px]"
     image="images/profile.jpg"
-    imageClass="sm:w-[110%] dark:opacity-80"
+    imageClass="sm:hx-w-[110%] dark:hx-opacity-80"
     style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));"
     link="about"
   >}}

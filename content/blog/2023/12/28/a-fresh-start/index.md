@@ -4,6 +4,8 @@ comments: true
 date: 2023-12-28
 tags: 
     - General
+    - Blog
+    - Community
 ---
 
 This is the first blog post on an "old" blog. It's a fresh start. I got rid of all the old content and started over. Now focusing on something different: more C# and more UI - specifically AvaloniaUI.
