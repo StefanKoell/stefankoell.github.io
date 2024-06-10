@@ -84,7 +84,7 @@ public sealed class SymbolIconExtension
 }
 ```
 
-Look at the line 61 and 80. The markup extension has a default value of 20 for the FontSize and in line 80 we always set that value to the FontSize property of the SymbolIcon. In this case it is a local value (similar to when you set that value in the XAML directly). Writing a style like this:
+Look at the line 11 and 30. The markup extension has a default value of 20 for the FontSize and in line 80 we always set that value to the FontSize property of the SymbolIcon. In this case it is a local value (similar to when you set that value in the XAML directly). Writing a style like this:
 
 ```xml
 <Style Selector="fluentIcon|SymbolIcon">
