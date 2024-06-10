@@ -2,7 +2,7 @@
 title: Blog
 ---
 
-<div style="text-align: center; margin-top: 1em;">
+<div class="c4w-badges" style="text-align: center; margin-top: 1em;">
 
 {{< hextra/hero-badge link="https://dotnet.social/@stefankoell" >}}
   {{< icon name="mastodon" attributes="height=14" >}}
@@ -21,7 +21,7 @@ title: Blog
 
 </div>
 
-<div style="text-align: center; margin-top: 1em;">
+<div class="c4w-badges" style="text-align: center; margin-top: 1em;">
 
 {{< hextra/hero-badge link="/tags" >}}
   {{< icon name="tag" attributes="height=14" >}}

@@ -16,7 +16,7 @@
               </a>
             </h3>
 
-            <span class="hx-opacity-50 hx-text-xs hx-leading-5">{{ partial "utils/format-date" .Date }}</span>
+          <span class="hx-opacity-50 hx-text-xs hx-leading-5">{{ partial "utils/format-date" .Date }}</span>
 
           {{- if site.Params.blog.list.displayTags -}}
             {{ with .Params.tags }}
@@ -39,11 +39,6 @@
             </a>
           </p>
 
-          <!-- <p class="hx-opacity-80 hx-mt-1 hx-leading-7">
-              <a class="hx-text-[color:hsl(var(--primary-hue),100%,50%)] hx-underline hx-underline-offset-2 hx-decoration-from-font" href="{{ .RelPermalink }}">
-                {{- $readMore -}}
-              </a>
-            </p> -->
           </div>
         {{ end -}}
       </main>

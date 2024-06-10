@@ -29,11 +29,19 @@
   >
     <div class="hx-flex hx-w-full hx-flex-col hx-items-center sm:hx-items-start">
       {{- if (.Site.Params.footer.displayPoweredBy | default true) }}<div class="hx-font-semibold">{{ template "theme-credit" $poweredBy }}</div>{{ end }}
+    
+      <!-- Custom Code -->
       {{- if .Site.Params.footer.displayCopyright }}<div class="hx-mt-6 hx-text-xs">Copyright &copy; {{ time.Now.Year }} {{ $copyright | markdownify }}</div>{{ end }}
+      <!-- /Custom Code -->
+    
     </div>
   </div>
-  <script type="text/javascript" src="/js/lightbox.js"></script>
-  <link rel="stylesheet" href="/css/lightbox.css">
+
+      <!-- Custom Code -->
+      <script type="text/javascript" src="/js/lightbox.js"></script>
+      <link rel="stylesheet" href="/css/lightbox.css">
+      <!-- /Custom Code -->
+
 </footer>
 
 {{- define "theme-credit" -}}
