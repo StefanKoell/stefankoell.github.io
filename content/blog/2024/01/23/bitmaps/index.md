@@ -40,9 +40,8 @@ In the first two cases you don't really have to care about memory usage because 
 
 If you are using bitmap based images, you have to think about where the image comes from and how it is used in your application during it's lifetime. **The `Image` control does nothing with the image source when the control is removed from the visual tree.** 
 
-{{< callout type="warning" >}}
-  If you source needs disposal, make sure you clean up after the image control or image is not used anymore. In my profiling tests, I also found out that setting the `Source` property explicitly to `null` is necessary. It looked like the garbage collector didn't really clear out the images when this is not done.
-{{< /callout >}}
+> [!WARNING]
+> If you source needs disposal, make sure you clean up after the image control or image is not used anymore. In my profiling tests, I also found out that setting the `Source` property explicitly to `null` is necessary. It looked like the garbage collector didn't really clear out the images when this is not done.
 
 ## Image Cache
 

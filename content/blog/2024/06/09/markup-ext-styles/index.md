@@ -37,11 +37,8 @@ So, in the end, the issue was:
 - The class `SymbolIcon` and the class `SymbolIconExtension` was in the same namespace
 - The XAML compiler got confused because the style selector `<Style Selector="fluentIcon|SymbolIcon">` was actually trying to set property values on the `SymbolIconExtension` instead of the resulting `SymbolIcon`.
 
-{{< callout type="info" emoji="💡" >}}
-Either move the `SymbolIconExtension` to a different namespace or use a different name for the extension to avoid these name conflicts.
-{{< /callout >}}
-
-
+> [!TIP]
+> Either move the `SymbolIconExtension` to a different namespace or use a different name for the extension to avoid these name conflicts.
 
 ## Local Values
 

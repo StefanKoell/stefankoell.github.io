@@ -81,9 +81,8 @@ Since we now have the `AnimationsEnabled` attached property and the dynamic reso
 - Note that the selector is using the `:is(Window)` expression. Since we registered the attached property with `inherits: true`, we don't need to select `Control` here. It will get the correct value through inheritance.
 - Also note that, as described in the docs, the property match syntax needs the parentheses to indicate it's an attached property we want to set.
 
-{{< callout type="warning" >}}
-If you want to test the styles, do not rely too much on the Dev Tool. I noticed that the value of the attached property changes one time for the observed control but then it doesn't. This seems to be an issue with the Dev Tool itself - not with the style. So to do proper testing, use some real styles you apply to see if the change of the setting through the dynamic resource is applied.
-{{< /callout >}}
+> [!WARNING]
+> If you want to test the styles, do not rely too much on the Dev Tool. I noticed that the value of the attached property changes one time for the observed control but then it doesn't. This seems to be an issue with the Dev Tool itself - not with the style. So to do proper testing, use some real styles you apply to see if the change of the setting through the dynamic resource is applied.
 
 ### Use Attached Property Value
 

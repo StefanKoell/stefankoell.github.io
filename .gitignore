@@ -21,3 +21,4 @@
 go.work
 
 public/**
+resources/_gen

@@ -48,15 +48,13 @@ Even apps like Visual Studio, Visual Studio Code or Rider run already natively o
 ### The Bad
 When I tried to run an Avalonia demo UI in a web browser, I noticed it was extremely slow and laggy. The app was basically not usable in the browser. After a while I realized, I'm running Google Chrome and guess what? 
 
-{{< callout type="error" >}}
-  Google Chrome does not have an ARM64 binary available for Windows!
-{{< /callout >}}
+> [!CAUTION]
+> Google Chrome does not have an ARM64 binary available for Windows!
 
 I never really noticed that Chrome is not running as a native ARM64 binary. Web browsing speed was quite OK but running an Avalonia app in Chrome is painfully slow!
 
-{{< callout type="info" >}}
-  When running Windows 11 on ARM64, make sure you are using Microsoft's Edge browser when testing an Avalonia app in the web browser!
-{{< /callout >}}
+> [!TIP]
+> When running Windows 11 on ARM64, make sure you are using Microsoft's Edge browser when testing an Avalonia app in the web browser!
 
 ### The Ugly
 Quite strange, to be honest. Both, Edge and Google Chrome are using the same Chromium engine under the hood. I don't really know why Google hasn't caught up yet. It's time for them to release an ARM64 version of Chrome.

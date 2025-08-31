@@ -38,9 +38,8 @@ internal partial class FontPickerViewModel : ObservableObject
 }
 ```
 
-{{< callout type="info" >}}
-  I'm using the [MVVM Community Toolkit](https://github.com/CommunityToolkit/dotnet?tab=readme-ov-file) to create a class and properties implementing INotifyPropertyChanged.
-{{< /callout >}}
+> [!NOTE]
+> I'm using the [MVVM Community Toolkit](https://github.com/CommunityToolkit/dotnet?tab=readme-ov-file) to create a class and properties implementing INotifyPropertyChanged.
 
 The `Items` collection is of type `Avalonia.Media.FontFamily` and the `FontManager` class from the same namespace provides convenient access to all the installed system fonts.
 

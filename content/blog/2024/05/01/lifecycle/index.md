@@ -63,9 +63,8 @@ public partial class Localize : ObservableObject
 }
 ```
 
-{{< callout type="info" >}}
-  Note, that I'm using `ObservableObject` and the `WeakReferenceManager` from the [MVVM Community Toolkit](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/mvvm/)
-{{< /callout >}}
+> [!NOTE]
+> Note, that I'm using `ObservableObject` and the `WeakReferenceManager` from the [MVVM Community Toolkit](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/mvvm/)
 
 In the markup extension we just create the instance of our translator class `Localize` and return a binding to the `Value` property:
 

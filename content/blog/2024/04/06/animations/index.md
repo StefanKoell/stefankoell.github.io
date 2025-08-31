@@ -85,9 +85,8 @@ In Avalonia, there's a very convenient way to apply style classes based on bindi
 
 Whenever the IsChecked property from the CheckBox is true, the `show` class is applied to the border. When the IsChecked property is false, the `hide` class is applied to the border. If you open the **Dev Tools** using `F12`, you can see the classes being applied when you toggle the check box.
 
-{{< callout type="info" >}}
-  Also note that the binding to the `IsVisible` property has been removed from the border. We deal with that later. So right now, the **Footer** is always visible.
-{{< /callout >}}
+> [!NOTE]
+> Also note that the binding to the `IsVisible` property has been removed from the border. We deal with that later. So right now, the **Footer** is always visible.
 
 ### Fade-In and Fade-Out
 
@@ -121,9 +120,8 @@ Now that we have those two classes applied to the border depending on the checke
 - In lines 11 and 12 we create a style for the border with the`hide` class applied and set the `Opacity` property value to `0`.
 - Lastly, in lines 15 through 19 we create a `DoubleTransition` for the `Opacity` property. For demonstration, I used `0:0:1` (1 second). In a real world application you may want this animation to be more subtle and set it to `0:0:0.2` (200 ms).
 
-{{< callout type="info" >}}
-  If you run the sample with the code above, you will notice that the **Footer** will fade-in and fade-out but the border area is always visible (we removed the `IsVisible` binding). So right now, the border will always occupy the content in the grid resulting in a black area at the bottom where the footer is shown.
-{{< /callout >}}
+> [!NOTE]
+> If you run the sample with the code above, you will notice that the **Footer** will fade-in and fade-out but the border area is always visible (we removed the `IsVisible` binding). So right now, the border will always occupy the content in the grid resulting in a black area at the bottom where the footer is shown.
 
 ### Handle Visibility
 

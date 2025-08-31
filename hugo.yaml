@@ -1,3 +1,10 @@
+# prev GoLang.Go: 1.23.2
+# current GoLang.Go: 1.25.0
+
+# prev Hugo.Hugo.Extended: 0.137.0
+# current Hugo.Hugo.Extended: 0.149.0
+
+
 baseURL: "https://code4ward.net/"
 title: "code4ward.net"
 
@@ -42,6 +49,8 @@ params:
   blog:
     list:
       displayTags: true
+  toc:
+    displayTags: true
 
   comments:
     enable: false
@@ -93,7 +102,7 @@ module:
     
   hugoVersion:
     extended: true
-    min: "0.127.0"
+    min: "0.149.0"
 
 markup:
   goldmark:

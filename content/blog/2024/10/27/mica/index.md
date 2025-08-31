@@ -53,10 +53,8 @@ partial void OnTransparencyEnabledChanged(bool value)
 
 If we want to disable transparency completely, we just set the property to an empty list, otherwise we simply set a new list which has one entry: `WindowTransparencyLevel.Mica`.
 
-{{< callout type="info" >}}
-If your Windows OS doesn't support Mica for whatever reason, of if you run the app on a non-Windows OS, the setting is simply ignored and your app will still run just fine in the "non transparency" mode.
-{{< /callout >}}
-
+> [!NOTE]
+> If your Windows OS doesn't support Mica for whatever reason, of if you run the app on a non-Windows OS, the setting is simply ignored and your app will still run just fine in the "non transparency" mode.
 
 ### Accent Border
 
@@ -70,9 +68,9 @@ partial void OnBorderEnabledChanged(bool value)
         : Colors.Transparent;
 }
 ```
-{{< callout type="info" >}}
-Keep in mind, that this code does not handle accent color changes from the OS. There is an event `App.MainWindow.PlatformSettings.ColorValuesChanged` which should be subscribed to in order to update the color values.
-{{< /callout >}}
+
+> [!NOTE]
+> Keep in mind, that this code does not handle accent color changes from the OS. There is an event `App.MainWindow.PlatformSettings.ColorValuesChanged` which should be subscribed to in order to update the color values.
 
 ## Resources
 
@@ -84,9 +82,8 @@ For this I decided to create theme dependent color resources with various levels
 
 In Windows, the Mica transparency is only showed on active/focused windows. That's why I have two color resources `UIWindowBackgroundColorInactive` (without any transparency) and `UIWindowBackgroundColorActive` with some transparency.
 
-{{< callout type="info" >}}
-The color resources in my sample app are all prefixed with `UI` and depending on the color theme, I have different colors and transparencies applied on various elements (borders, backgrounds, etc.).
-{{< /callout >}}
+> [!NOTE]
+> The color resources in my sample app are all prefixed with `UI` and depending on the color theme, I have different colors and transparencies applied on various elements (borders, backgrounds, etc.).
 
 ### Brushes
 
