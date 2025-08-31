@@ -2,3 +2,7 @@
     margin: 1em;
     text-align: center;
 }
+
+.c4w-blog-title-badges > a {
+    margin: .4em;
+}
