@@ -62,9 +62,11 @@ In the `App.axaml` simply make sure you put your own `ColorPaletteFactory` in yo
 
 ### Overriding the Create method
 
-In addition to the out-of-the-box supported color ramps, there are two "modes" which should provide a custom color ramp. If one of the two modes (`System` or `Custom`) is set in the `AccentColor` property, we need to replace one of the existing ramps with a new ramp containing the new and custom color shades. In my example, I decided to replace the `Red` color ramp with the custom color ramp:
+In addition to the out-of-the-box supported color ramps, there are two "modes" which should provide a custom color ramp. If one of the two modes (`System` or `Custom`) is set in the `AccentColor` property, we need to add one additional ramp containing the system's color or custom color shades:
 
-```csharp {linenos=table, hl_lines="14-15"}
+```csharp {linenos=table, hl_lines="16"}
+private const string CustomRampName = "Custom";
+
 public override ColorPalette Create()
 {
     var palette = base.Create();
@@ -78,8 +80,7 @@ public override ColorPalette Create()
     if (color is null) 
         return palette;
     
-    palette.Ramps.Remove(Hue.Red);
-    palette.Ramps.Add(CreateColorRamp(Hue.Red, color.Value));
+    palette.Ramps.Add(CreateColorRamp(CustomRampName, false, color.Value));
 
     return palette;
 }
@@ -108,7 +109,7 @@ private void SetAccentColor(AccentColor accentColor)
 
 ### Monitor System's Accent Color Changes
 
-The factory class also has a method which sets up and event handler when the OS color values have changed:
+The factory class also has a method which sets up an event handler when the OS color values have changed:
 
 ```csharp {linenos=table}
 public void StartSystemAccentColorWatcher()
