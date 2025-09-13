@@ -1,12 +1,6 @@
-# prev GoLang.Go: 1.23.2
-# current GoLang.Go: 1.25.0
-
-# prev Hugo.Hugo.Extended: 0.137.0
-# current Hugo.Hugo.Extended: 0.149.0
-
-
 baseURL: "https://code4ward.net/"
 title: "code4ward.net"
+
 
 enableRobotsTXT: true
 enableGitInfo: true
@@ -38,11 +32,11 @@ params:
   theme:
     # light | dark | system
     default: system
-    displayToggle: true
+    displayToggle: false
 
   footer:
     enable: true
-    displayCopyright: true 
+    displayCopyright: false 
     displayPoweredBy: false
     width: normal
 
@@ -102,7 +96,7 @@ module:
     
   hugoVersion:
     extended: true
-    min: "0.149.0"
+    min: "0.150.0"
 
 markup:
   goldmark:
@@ -115,21 +109,30 @@ enableInlineShortcodes: true
 
 menu:
   main:
-    - name: Royal Apps
-      weight: 1
-      url: "https://www.royalapps.com"
-    - identifier: blog
-      name: Blog
-      pageRef: /blog
-      weight: 2
+    - identifier: links
+      name: Links
     - identifier: about
-      name: About
+      name: About Me
       pageRef: /about
-      weight: 3
+      params:
+        type: link
+        icon: user
+      parent: links
+      weight: 1
+    - name: Royal Apps
+      params:
+        type: link
+        icon: royalapps
+      parent: links
+      url: "https://www.royalapps.com"
+      weight: 2
     - name: Search
-      weight: 4
       params:
         type: search
+    - name: Theme Toggle
+      params:
+        type: theme-toggle
+        label: false
 
 # services:
 #   googleAnalytics:
