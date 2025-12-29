@@ -96,7 +96,7 @@ module:
     
   hugoVersion:
     extended: true
-    min: "0.150.0"
+    min: "0.153.4"
 
 markup:
   goldmark:
