@@ -6,3 +6,147 @@
 .c4w-blog-title-badges > a {
     margin: .4em;
 }
+
+:root {
+    --page-glow-light: rgba(235, 235, 235, 0.95);
+    --page-glow-light-edge: rgba(245, 245, 245, 0.15);
+    --page-glow-dark: rgba(140, 170, 255, 0.18);
+    --page-glow-dark-edge: rgba(0, 0, 0, 0);
+}
+
+body {
+    background-image: radial-gradient(1200px 420px at 50% -10%, var(--page-glow-light), var(--page-glow-light-edge));
+    background-repeat: no-repeat;
+    background-size: 120% 60%;
+    background-position: 50% 0%;
+    background-attachment: fixed;
+    animation: page-top-glow 18s ease-in-out infinite;
+}
+
+.dark body {
+    background-image: radial-gradient(1200px 420px at 50% -10%, var(--page-glow-dark), var(--page-glow-dark-edge));
+}
+
+@keyframes page-top-glow {
+    0% {
+        background-position: 50% 0%;
+    }
+    50% {
+        background-position: 50% 6%;
+    }
+    100% {
+        background-position: 50% 0%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body {
+        animation: none;
+    }
+}
+
+.hextra-badge > div {
+    position: relative;
+    background-color: rgba(245, 245, 245, 0.2);
+    backdrop-filter: blur(12px) saturate(130%);
+    -webkit-backdrop-filter: blur(12px) saturate(130%);
+}
+
+.dark .hextra-badge > div {
+    background-color: rgba(20, 20, 20, 0.2);
+}
+
+.hextra-badge > div::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: inherit;
+    background: linear-gradient(140deg, rgba(245, 245, 245, 0.68), rgba(0, 0, 0, 0.4) 60%, rgba(245, 245, 245, 0.26));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    transition: background 220ms ease-in-out;
+}
+
+.dark .hextra-badge > div::before {
+    background: linear-gradient(140deg, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.45) 60%, rgba(255, 255, 255, 0.2));
+}
+
+.hextra-badge > div {
+    transition: box-shadow 200ms ease, border-color 200ms ease;
+}
+
+.hextra-badge > div:hover,
+.hextra-badge > div:focus-visible {
+    box-shadow: 0 0 8px rgba(220, 220, 220, 0.5);
+}
+
+.dark .hextra-badge > div:hover,
+.dark .hextra-badge > div:focus-visible {
+    box-shadow: 0 0 9px rgba(140, 170, 255, 0.45);
+}
+
+.hextra-badge > div:hover::before,
+.hextra-badge > div:focus-visible::before {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.dark .hextra-badge > div:hover::before,
+.dark .hextra-badge > div:focus-visible::before {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.c4w-blog-entry {
+    position: relative;
+    border-radius: 18px;
+    padding: 1.25rem 1.25rem 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    background-image: radial-gradient(140% 120% at 20% 0%, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(16px) saturate(115%);
+    -webkit-backdrop-filter: blur(16px) saturate(115%);
+    transition: background-color 240ms ease-in-out, background-image 240ms ease-in-out;
+}
+
+.dark .c4w-blog-entry {
+    background-color: rgba(20, 20, 20, 0.2);
+    background-image: radial-gradient(140% 120% at 20% 0%, rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0));
+}
+
+.c4w-blog-entry:hover {
+    background-color: rgba(235, 235, 235, 0.28);
+    background-image: radial-gradient(140% 120% at 20% 0%, rgba(235, 235, 235, 0.35), rgba(255, 255, 255, 0));
+}
+
+.dark .c4w-blog-entry:hover {
+    background-color: rgba(20, 20, 20, 0.28);
+    background-image: radial-gradient(140% 120% at 20% 0%, rgba(255, 255, 255, 0.14), rgba(0, 0, 0, 0));
+}
+
+
+.c4w-blog-entry::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: inherit;
+    background: linear-gradient(140deg, rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0.28) 60%, rgba(255, 255, 255, 0.25));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    transition: background 240ms ease-in-out;
+}
+
+.dark .c4w-blog-entry::before {
+    background: linear-gradient(140deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.45) 60%, rgba(255, 255, 255, 0.14));
+}
+
+.c4w-blog-entry:hover::before {
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.dark .c4w-blog-entry:hover::before {
+    background: rgba(255, 255, 255, 0.28);
+}
