@@ -8,34 +8,78 @@
 }
 
 :root {
-    --page-glow-light: rgba(235, 235, 235, 0.95);
-    --page-glow-light-edge: rgba(245, 245, 245, 0.15);
-    --page-glow-dark: rgba(140, 170, 255, 0.18);
+    --page-glow-light: rgba(230, 230, 230, 1);
+    --page-glow-light-edge: rgba(235, 235, 235, 0.25);
+    --page-glow-dark: rgba(150, 185, 255, 0.24);
     --page-glow-dark-edge: rgba(0, 0, 0, 0);
 }
 
 body {
-    background-image: radial-gradient(1200px 420px at 50% -10%, var(--page-glow-light), var(--page-glow-light-edge));
+    background-image:
+        radial-gradient(700px 820px at 50% -6%, var(--page-glow-light), var(--page-glow-light-edge)),
+        radial-gradient(1200px 900px at 55% -20%, var(--page-glow-tint), rgba(255, 255, 255, 0)),
+        linear-gradient(27deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 55%);
     background-repeat: no-repeat;
-    background-size: 120% 60%;
-    background-position: 50% 0%;
+    background-size: 108% 96%, 160% 140%, 140% 120%;
+    background-position: 50% -2%, 50% -2%, 50% -2%;
     background-attachment: fixed;
-    animation: page-top-glow 18s ease-in-out infinite;
+    animation: page-top-glow 22s ease-in-out infinite, page-top-tint-light 28s ease-in-out infinite;
 }
 
 .dark body {
-    background-image: radial-gradient(1200px 420px at 50% -10%, var(--page-glow-dark), var(--page-glow-dark-edge));
+    background-image:
+        radial-gradient(700px 820px at 50% -6%, var(--page-glow-dark), var(--page-glow-dark-edge)),
+        radial-gradient(1200px 900px at 55% -20%, var(--page-glow-tint), rgba(0, 0, 0, 0)),
+        linear-gradient(27deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0) 55%);
+    animation: page-top-glow 22s ease-in-out infinite, page-top-tint-dark 28s ease-in-out infinite;
 }
 
 @keyframes page-top-glow {
     0% {
-        background-position: 50% 0%;
+        background-position: 50% -2%, 50% -2%, 50% -2%;
+        background-size: 108% 96%, 160% 140%, 140% 120%;
     }
-    50% {
-        background-position: 50% 6%;
+    40% {
+        background-position: 48% 3%, 49% 1%, 48% 1%;
+        background-size: 114% 102%, 166% 146%, 146% 126%;
+    }
+    70% {
+        background-position: 52% 1%, 51% 0%, 52% 0%;
+        background-size: 110% 98%, 162% 142%, 142% 122%;
     }
     100% {
-        background-position: 50% 0%;
+        background-position: 50% -2%, 50% -2%, 50% -2%;
+        background-size: 108% 96%, 160% 140%, 140% 120%;
+    }
+}
+
+@property --page-glow-tint {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: rgba(235, 235, 235, 0.08);
+}
+
+@keyframes page-top-tint-light {
+    0% {
+        --page-glow-tint: rgba(235, 235, 235, 0.08);
+    }
+    50% {
+        --page-glow-tint: rgba(215, 230, 255, 0.12);
+    }
+    100% {
+        --page-glow-tint: rgba(235, 235, 235, 0.08);
+    }
+}
+
+@keyframes page-top-tint-dark {
+    0% {
+        --page-glow-tint: rgba(120, 150, 255, 0.08);
+    }
+    50% {
+        --page-glow-tint: rgba(170, 205, 255, 0.14);
+    }
+    100% {
+        --page-glow-tint: rgba(120, 150, 255, 0.08);
     }
 }
 
@@ -47,13 +91,13 @@ body {
 
 .hextra-badge > div {
     position: relative;
-    background-color: rgba(245, 245, 245, 0.2);
+    background-color: rgba(245, 245, 245, 0.14);
     backdrop-filter: blur(12px) saturate(130%);
     -webkit-backdrop-filter: blur(12px) saturate(130%);
 }
 
 .dark .hextra-badge > div {
-    background-color: rgba(20, 20, 20, 0.2);
+    background-color: rgba(20, 20, 20, 0.12);
 }
 
 .hextra-badge > div::before {
@@ -81,21 +125,29 @@ body {
 .hextra-badge > div:hover,
 .hextra-badge > div:focus-visible {
     box-shadow: 0 0 8px rgba(220, 220, 220, 0.5);
+    transition-duration: 140ms;
+    transition-timing-function: ease-out;
 }
 
 .dark .hextra-badge > div:hover,
 .dark .hextra-badge > div:focus-visible {
     box-shadow: 0 0 9px rgba(140, 170, 255, 0.45);
+    transition-duration: 140ms;
+    transition-timing-function: ease-out;
 }
 
 .hextra-badge > div:hover::before,
 .hextra-badge > div:focus-visible::before {
     background: rgba(0, 0, 0, 0.4);
+    transition-duration: 140ms;
+    transition-timing-function: ease-out;
 }
 
 .dark .hextra-badge > div:hover::before,
 .dark .hextra-badge > div:focus-visible::before {
     background: rgba(255, 255, 255, 0.35);
+    transition-duration: 140ms;
+    transition-timing-function: ease-out;
 }
 
 .c4w-blog-entry {
@@ -117,11 +169,15 @@ body {
 .c4w-blog-entry:hover {
     background-color: rgba(235, 235, 235, 0.28);
     background-image: radial-gradient(140% 120% at 20% 0%, rgba(235, 235, 235, 0.35), rgba(255, 255, 255, 0));
+    transition-duration: 160ms;
+    transition-timing-function: ease-out;
 }
 
 .dark .c4w-blog-entry:hover {
     background-color: rgba(20, 20, 20, 0.28);
     background-image: radial-gradient(140% 120% at 20% 0%, rgba(255, 255, 255, 0.14), rgba(0, 0, 0, 0));
+    transition-duration: 160ms;
+    transition-timing-function: ease-out;
 }
 
 
@@ -145,8 +201,17 @@ body {
 
 .c4w-blog-entry:hover::before {
     background: rgba(0, 0, 0, 0.35);
+    transition-duration: 160ms;
+    transition-timing-function: ease-out;
 }
 
 .dark .c4w-blog-entry:hover::before {
     background: rgba(255, 255, 255, 0.28);
+    transition-duration: 160ms;
+    transition-timing-function: ease-out;
+}
+
+.hextra-toc .hextra-scrollbar > div {
+    background-color: transparent;
+    box-shadow: none;
 }
