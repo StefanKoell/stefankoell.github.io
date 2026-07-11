@@ -1,5 +1,8 @@
 ---
 title: code4ward.net
+menu:
+  main:
+    name: Home
+    weight: 1
+    pre: fa-house
 ---
-
-<meta http-equiv="refresh" content="0; URL=/blog">

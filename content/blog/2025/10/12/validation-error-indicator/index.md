@@ -20,14 +20,12 @@ Avalonia has [built-in Data Validation](docs.avaloniaui.net/docs/guides/developm
 The default template and the one from the docs do have a significant disadvantage: these templates will change the layout. This has been bugging me for a long time, so I tried to find a better solution.
 
 So instead of having something like this:
-{{< cards >}}
-  {{< card link="Default.png" image="Default.png" subtitle="Default Data Validation Error Template" method="Resize" options="600x q80 webp" >}}
-{{< /cards >}}
+![Default Data Validation Error Template](Default.png "Default Data Validation Error Template")
+{ width="600" caption="Default Data Validation Error Template" }
 
 I want to have something like this:
-{{< cards >}}
-  {{< card link="Adorner.png" image="Adorner.png" subtitle="Adorner Data Validation Error Template" method="Resize" options="600x q80 webp" >}}
-{{< /cards >}}
+![Adorner Data Validation Error Template](Adorner.png "Adorner Data Validation Error Template")
+{ width="600" caption="Adorner Data Validation Error Template" }
 
 Note that when using the default template, the height of the settings card is increased to make room for the error message. In the second screenshot, you can see, that we have an *Adorner* on the edge of the control which simply shows, there's an issue. Instead of a red ellipse, you can put an icon there or even a pill shaped text badge "Error" or something. In any case, you don't see the layout getting messed up. In my case I put the error message in the tooltip but you also could have a list of errors at the top or bottom of the page - like many web sites do.
 
@@ -114,8 +112,7 @@ There are still clipping issues. To demonstrate, I put the adorner at the very t
 
 What's puzzling is, that the `FocusAdorner` (white outline when tab navigation is used to focus the control) is clipped correctly. Both, the `FocusAdorner` and the `AdornerAnchorPanel` are using the same adorner layer. I'm not sure why the one is clipped correctly while the other one "bleeds" through. But this is maybe a story for another time...
 
-{{< callout type="error" emoji="♥️" >}}
-Huge thanks to [Jean-Paul Mikkers](https://github.com/jpmikkers) for sharing this useful control!
-{{< /callout >}}
+> Huge thanks to [Jean-Paul Mikkers](https://github.com/jpmikkers) for sharing this useful control!
+{ .prompt-danger }
 
 If someone has a solution to the clipping or has a more elegant way to set the data context in the adorner layer control, let me know.

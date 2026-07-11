@@ -1,6 +1,5 @@
-baseURL: "https://code4ward.net/"
-title: "code4ward.net"
-
+baseURL: https://code4ward.net/
+title: code4ward.net
 
 enableRobotsTXT: true
 enableGitInfo: true
@@ -8,160 +7,103 @@ enableEmoji: true
 hasCJKLanguage: true
 
 defaultContentLanguage: en
+defaultContentLanguageInSubdir: false
+
+languages:
+  en:
+    label: English
+    locale: en
+    weight: 1
+    title: code4ward.net
+    params:
+      tagline: Personal blog about development (mostly C#) and UI (mostly AvaloniaUI).
+
+pagination:
+  pagerSize: 10
+
+taxonomies:
+  tag: tags
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+  section:
+    - HTML
+    - RSS
 
 params:
-  description: Personal blog about development (mostly C#) and UI (mostly AvaloniaUI).
-  navbar:
-    displayTitle: false
-    displayLogo: true
-    logo:
-      path: images/logo.svg
-      dark: images/logo-dark.svg
-      width: 230
-      height: 42
-      link: /
-    width: wide
+  theme_version: 1.0.3
+  toc: true
+  avatar: img/profile.jpg
+  author: Stefan Koell
 
-  displayUpdatedDate: true
-  dateFormat: "January 2, 2006"
+  assets:
+    self_host: false
 
-  page:
-    # full (100%), wide (90rem), normal (1280px)
-    width: normal
-
-  theme:
-    # light | dark | system
-    default: system
-    displayToggle: false
-
-  footer:
-    enable: true
-    displayCopyright: false 
-    displayPoweredBy: false
-    width: normal
-
-  blog:
-    list:
-      displayTags: true
-  toc:
-    displayTags: true
+  social:
+    name: Stefan Koell
+    url: https://code4ward.net/
+    links:
+      - type: github
+        id: StefanKoell
+        icon: fab fa-github
+      - type: mastodon
+        url: https://dotnet.social/@stefankoell
+        icon: fab fa-mastodon
+        noblank: true
+      - type: bluesky
+        url: https://bsky.app/profile/stefankoell.bsky.social
+        icon: fab fa-bluesky
+      - type: twitter
+        id: stefankoell
+        icon: fab fa-x-twitter
+      - type: linkedin
+        url: https://www.linkedin.com/in/stefankoell
+        icon: fab fa-linkedin
+      - type: rss
+        icon: fas fa-rss
+        noblank: true
 
   comments:
-    enable: false
-    type: giscus
-
-    # https://giscus.app/
+    enable: true
+    provider: giscus
     giscus:
       repo: StefanKoell/stefankoell.github.io
-      repoId: R_kgDOK_HhAQ
+      repo_id: R_kgDOK_HhAQ
       category: General
-      categoryId: DIC_kwDOK_HhAc4CcF6-
+      category_id: DIC_kwDOK_HhAc4CcF6-
       mapping: pathname
       strict: 0
-      reactionsEnabled: 1
-      emitMetadata: 0
-      inputPosition: bottom
+      reactions_enabled: 1
+      input_position: bottom
       lang: en
-      
-# <script src="https://giscus.app/client.js"
-#   data-repo="StefanKoell/stefankoell.github.io"
-#   data-repo-id="R_kgDOK_HhAQ"
-#   data-category="General"
-#   data-category-id="DIC_kwDOK_HhAc4CcF6-"
-#   data-mapping="pathname"
-#   data-strict="0"
-#   data-reactions-enabled="1"
-#   data-emit-metadata="0"
-#   data-input-position="bottom"
-#   data-theme="preferred_color_scheme"
-#   data-lang="en"
-#   data-loading="lazy"
-#   crossorigin="anonymous"
-#   async>
-# </script>
-
-  # Search
-  # flexsearch is enabled by default
-  search:
-    enable: true
-    type: flexsearch
-
-    flexsearch:
-      # index page by: content | summary | heading | title
-      index: content
 
 module:
   imports:
-    - path: github.com/imfing/hextra
-    
+    - path: github.com/StefanKoell/hugo-theme-chirpy
   hugoVersion:
     extended: true
-    min: "0.153.4"
+    min: 0.164.0
 
 markup:
   goldmark:
+    parser:
+      wrapStandAloneImageWithinParagraph: false
+      attribute:
+        block: true
+        title: true
     renderer:
       unsafe: true
   highlight:
+    anchorLineNos: false
+    codeFences: true
+    guessSyntax: true
+    lineNos: true
+    lineNumbersInTable: true
     noClasses: false
+    tabWidth: 4
+    wrapperClass: highlight
 
 enableInlineShortcodes: true
-
-menu:
-  main:
-    - identifier: links
-      name: Links
-    - identifier: about
-      name: About Me
-      pageRef: /about
-      params:
-        type: link
-        icon: user
-      parent: links
-      weight: 1
-    - name: Royal Apps
-      params:
-        type: link
-        icon: royalapps
-      parent: links
-      url: "https://www.royalapps.com"
-      weight: 2
-    - name: Search
-      params:
-        type: search
-    - name: Theme Toggle
-      params:
-        type: theme-toggle
-        label: false
-
-# services:
-#   googleAnalytics:
-#     ID: G-MEASUREMENT_ID
-
-outputs:
-  home: 
-    - html
-  section: 
-    - html
-    - rss
-
-#   sidebar:
-#     - identifier: more
-#       name: More
-#       params:
-#         type: separator
-#       weight: 1
-#     - identifier: about
-#       name: "About"
-#       pageRef: "/about"
-#       weight: 2
-#     - identifier: hugoDocs
-#       name: "Hugo Docs ↗"
-#       url: "https://gohugo.io/documentation/"
-#       weight: 3
-
-
-
-#   editURL:
-#     enable: true
-#     base: "https://github.com/imfing/hextra/edit/main/exampleSite/content"

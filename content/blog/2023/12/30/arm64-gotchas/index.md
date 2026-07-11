@@ -39,9 +39,8 @@ Luckily, Royal TS is available on ARM64 natively which makes it really fast and 
 ### The Good
 If you install Windows 11 on ARM and even some dev tools, you will see in the Task Manager that almost everything runs natively on the ARM architecture.
 
-{{< cards >}}
-  {{< card link="taskmanager.png" image="taskmanager.png" subtitle="Task Manager" method="Resize" options="600x q80 webp" >}}
-{{< /cards >}}
+![Task Manager](taskmanager.png "Task Manager")
+{ width="600" caption="Task Manager" }
 
 Even apps like Visual Studio, Visual Studio Code or Rider run already natively on ARM64.
 

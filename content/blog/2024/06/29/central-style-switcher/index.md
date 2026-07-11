@@ -111,9 +111,8 @@ The nested style applying the brush transition starting at `line 2` will only be
 
 I think this is a good way to handle styles depending on some centrally stored configuration. Using this I can use a global setting to apply conditional styles on **any** control. Implementing something like a **High Contrast** option should be easy with a technique like this. The main advantage for me using the above is, I don't have to touch existing XAML and have a "central style sheet" for these conditions. I'm sure there are other ways to something similar, maybe [Behaviors](https://github.com/AvaloniaUI/Avalonia.Xaml.Behaviors), or [Mixins](https://github.com/AvaloniaUI/Avalonia/blob/d4d322654e025ac5c10fc88c34a0a400a407d179/src/Avalonia.Controls/Mixins/PressedMixin.cs#L28). If you have solved this differently, let me know. I'm always interested to see how people are solving problems like this.
 
-{{< callout type="error" emoji="♥️" >}}
-Thanks to the great Avalonia community on GitHub and Telegram. Those folks are a tremendous help and inspiration and always patient as well!
-{{< /callout >}}
+> Thanks to the great Avalonia community on GitHub and Telegram. Those folks are a tremendous help and inspiration and always patient as well!
+{ .prompt-danger }
 
 
 

@@ -48,9 +48,8 @@ Here's a simple example:
 In the XAML you simply provide a name (x:Name) for your input element (TextBox) and use this name in the `Target` attribute of the label control. Also notice that I used the underscore character in front of the desired access key.
 
 When you run this application, you get something like this:
-{{< cards >}}
-  {{< card link="label-01.png" image="label-01.png" subtitle="Screenshot" method="Resize" options="600x q80 webp" >}}
-{{< /cards >}}
+![Screenshot](label-01.png "Screenshot")
+{ width="600" caption="Screenshot" }
 
 A couple of notes:
 * The screenshot shows the form after the `ALT` key has been pressed. The characters marked with an underscore prefix are underlined. Note that the underlined characters are not shown initially.
@@ -92,9 +91,8 @@ Anyway, hoping for features to be included in the future doesn't really solve my
 
 Hit `F12` while debugging the app to open the Avalonia DevTools and locate the Label control in the **Visual Tree**:
 
-{{< cards >}}
-  {{< card link="label-02.png" image="label-02.png" subtitle="Avalonia DevTools" method="Resize" options="600x q80 webp" >}}
-{{< /cards >}}
+![Avalonia DevTools](label-02.png "Avalonia DevTools")
+{ width="600" caption="Avalonia DevTools" }
 
 As you can see, the Label's ContentPresenter is putting the provided string (from the Label's `Content` attribute) into a control called `AccessText`. In the **Attached Properties** section you can see that there are TextBlock related properties available, including `TextWrapping`.
 

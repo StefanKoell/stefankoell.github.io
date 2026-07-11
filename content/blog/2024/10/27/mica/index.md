@@ -18,9 +18,8 @@ Make your Avalonia app look like a 'native' Windows 11 style app supporting the 
 
 Avalonia is a great open source, cross-platform, UI framework for .net which allows you to run your app almost everywhere. Windows, macOS, Linux, Mobile, web browser, and more. If you only target Windows, or even when you target multiple OSes, you may want your app to look like a native Windows 11 app on Windows. Thanks to the powerful styling system, you can make this happen. In this blog post, I will focus on Windows and go through the steps needed to make your app look like this:
 
-{{< cards >}}
-  {{< card link="Screenshot.png" image="Screenshot.png" subtitle="Windows 11 Mica Background" method="Resize" options="600x q80 webp" >}}
-{{< /cards >}}
+![Windows 11 Mica Background](Screenshot.png "Windows 11 Mica Background")
+{ width="600" caption="Windows 11 Mica Background" }
 
 The sample application can be found on my [github repository](https://github.com/StefanKoell/Misc/tree/main/src/AvaloniaMica).
 
