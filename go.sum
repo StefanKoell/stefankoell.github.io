@@ -1,2 +1,8 @@
 github.com/StefanKoell/hugo-theme-chirpy v0.0.0-20260711094013-f893e21d0214 h1:Xs3a+gbD3Mvj5T5VoWAu30tAKkxAAFnWo+Z2H9wetiQ=
 github.com/StefanKoell/hugo-theme-chirpy v0.0.0-20260711094013-f893e21d0214/go.mod h1:hK3Z1LpUWQRSEmASAkxJuL6abN87IoLSK1td4d3SHFM=
+github.com/geekifan/chirpy-static-assets v0.0.0-20250507021825-887e490b15f2 h1:r/j8ns7StZlMJeDd5mRPZ5RgogdsegvrVHPr2y955/U=
+github.com/geekifan/chirpy-static-assets v0.0.0-20250507021825-887e490b15f2/go.mod h1:F58Ey9QK/tEgIxwcQSqAgV4ZA24mCb714B58D4Syv/0=
+github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20800 h1:j5myhhzYwIHTr5ctK96Elfgp5uRROvrlTzYwwe1nF8o=
+github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20800/go.mod h1:P5GGyhdxi00C5zW7vkRo/IS532gZY/YS2TS395Xaxho=
+github.com/gohugoio/hugo-mod-jslibs-dist/popperjs/v2 v2.21100.20000/go.mod h1:mFberT6ZtcchrsDtfvJM7aAH2bDKLdOnruUHl0hlapI=
+github.com/twbs/bootstrap v5.3.8+incompatible/go.mod h1:fZTSrkpSf0/HkL0IIJzvVspTt1r9zuf7XlZau8kpcY0=

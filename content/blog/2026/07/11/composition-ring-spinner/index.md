@@ -25,6 +25,9 @@ For this scenario, I created a `CompositionRingSpinner` which uses Avalonia's co
 
 The ready-to-use sample application can be found [here](https://github.com/StefanKoell/Misc/tree/main/src/CompositionRingSpinner). It shows a standard, indeterminate `ProgressBar` and the `CompositionRingSpinner` next to each other.
 
+![CompositionRingSpinner compared to an indeterminate ProgressBar](CompositionRingSpinner.gif "CompositionRingSpinner compared to an indeterminate ProgressBar")
+{ width="800" caption="The ProgressBar stops while the CompositionRingSpinner continues to animate" }
+
 The button deliberately blocks the UI thread for five seconds:
 
 ```csharp {linenos=table}
