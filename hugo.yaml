@@ -16,7 +16,7 @@ languages:
     weight: 1
     title: code4ward.net
     params:
-      tagline: Personal blog about development (mostly C#) and UI (mostly AvaloniaUI).
+      tagline: Stuff nobody is interested in...
 
 pagination:
   pagerSize: 10
